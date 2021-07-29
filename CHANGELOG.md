@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.77.0 (upcoming)
+
+* Pending changelog
+
+## 0.76.0-22de5b2 (Built: July 29, 2021 | Pre-release)
+
+* Some changes for a branch milestone
+
 ## 0.69.0 (upcoming)
 
 * Pending changelog

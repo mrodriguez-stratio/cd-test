@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.68.0 (upcoming)
+## 0.68.0 (July 29, 2021)
 
 * Pending changelog
 

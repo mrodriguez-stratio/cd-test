@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.67.0 (upcoming)
+## 0.67.0 (July 29, 2021)
 
 * Pending changelog
 

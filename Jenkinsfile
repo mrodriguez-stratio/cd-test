@@ -7,6 +7,9 @@ hose {
     DEPLOYONPRS = false
     GENERATE_QA_ISSUE = false
 //    ANCHORE_NIGHTLY_JOB = true
+    ITPARAMETERS = """
+    | -DZOOKEEPER_HOSTNAME=%%ZOOKEEPER
+    | """
 
     ITSERVICES = [
         ['ZOOKEEPER': [

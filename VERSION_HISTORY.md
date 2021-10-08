@@ -1,3 +1,5 @@
+#### 0.77.4-47773bb (Built: October 08, 2021 | Pre-release)
+
 #### 0.77.3-38db294 (Built: September 07, 2021 | Released: September 23, 2021)
 
 #### 0.77.2-3defe32 (Built: September 01, 2021 | Released: September 01, 2021)

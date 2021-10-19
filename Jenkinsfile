@@ -2,10 +2,9 @@
 
 hose {
     EMAIL = 'cd'
-    NEW_VERSIONING = 'true'
     ANCHORE_TEST = true
     DEPLOYONPRS = false
-    GENERATE_QA_ISSUE = false
+    GENERATE_QA_ISSUE = true
 //    ANCHORE_NIGHTLY_JOB = true
     ITPARAMETERS = """
     | -DZOOKEEPER_HOSTNAME=%%ZOOKEEPER

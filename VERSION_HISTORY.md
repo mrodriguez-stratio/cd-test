@@ -1,4 +1,4 @@
-#### 0.77.6-dfd031e (Built: November 22, 2021 | Pre-release)
+#### 0.77.6-aae1875 (Built: November 22, 2021 | Pre-release)
 
 #### 0.77.5-9625712 (Built: November 12, 2021 | Released: November 12, 2021)
 

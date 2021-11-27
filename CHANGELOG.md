@@ -8,7 +8,7 @@
 
 * Some other changes
 
-## 0.76.0-22de5b2 (Built: July 29, 2021 | Pre-release)
+## 0.76.0-a4bce11 (Built: November 27, 2021 | Pre-release)
 
 * Some changes for a branch milestone
 

@@ -12,7 +12,7 @@
 
 #### 0.77.0-b394cf3 (Built: July 29, 2021 | Pre-release)
 
-#### 0.76.0-22de5b2 (Built: July 29, 2021 | Pre-release)
+#### 0.76.0-a4bce11 (Built: November 27, 2021 | Pre-release)
 
 #### 0.68.0-16947eb (Built: July 29, 2021 | Pre-release)
 

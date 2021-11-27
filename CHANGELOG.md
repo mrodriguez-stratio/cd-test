@@ -8,7 +8,7 @@
 
 * Some other changes
 
-## 0.76.0-a556210 (Built: November 27, 2021 | Pre-release)
+## 0.76.0-a556210 (Built: November 27, 2021 | Released: November 27, 2021)
 
 * Some changes for a branch milestone
 

@@ -1,4 +1,4 @@
-@Library('libpipelines@feature-maven-multiple-pom-files') _
+@Library('libpipelines') _
 
 hose {
     EMAIL = 'cd'

@@ -15,7 +15,7 @@ public class CdIT {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        Assert.assertEquals("YES", "YES");
+        Assert.assertEquals("YES", "NO");
     }
 
     @Test

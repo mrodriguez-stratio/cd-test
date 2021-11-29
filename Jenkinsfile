@@ -5,6 +5,7 @@ hose {
     ANCHORE_TEST = true
     DEPLOYONPRS = false
     GENERATE_QA_ISSUE = true
+    SHOW_RAW_YAML = true
 //    ANCHORE_NIGHTLY_JOB = true
     ITPARAMETERS = """
     | -DZOOKEEPER_HOSTNAME=%%ZOOKEEPER

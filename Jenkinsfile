@@ -17,7 +17,7 @@ hose {
 	    'healthcheck': 2181,
             'env': [
                   'zk_id=1'],
-            'sleep': 5,
+            'sleep': 60,
 	    'volumes': ["/tmp:/tmp", "/tmp2:/tmp2"]
 	]]]
 

@@ -18,7 +18,7 @@ hose {
             'env': [
                   'zk_id=1'],
             'sleep': 5,
-	    'volumes': ["/tmp:/tmp"]
+	    'volumes': ["/tmp:/tmp", "/tmp2:/tmp2"]
 	]]]
 
 	ATSERVICES = [

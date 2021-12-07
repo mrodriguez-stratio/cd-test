@@ -14,7 +14,7 @@ hose {
     ITSERVICES = [
         ['ZOOKEEPER': [
             'image': 'jplock/zookeeper:3.5.2-alpha',
-	    'ports': [[containerPort: 2181, port: 2181]]
+	    'ports': [[containerPort: 2181, port: 2181]],
             'env': [
                   'zk_id=1'],
             'sleep': 60,

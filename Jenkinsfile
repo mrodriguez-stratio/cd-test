@@ -23,7 +23,7 @@ hose {
 	    				'ports': [[containerPort: 2181, port: 2181]],
             				'env': [
                   				'zk_id=1'],
-            				'sleep': 60,
+            				'sleep': 600,
 	    				'volumes': ["/tmp2:/tmp2"]
 				]]	
 			]

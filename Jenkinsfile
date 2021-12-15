@@ -8,32 +8,24 @@ hose {
     ENABLE_CONCURRENT_BUILDS = true
     SHOW_RAW_YAML = true
 //    ANCHORE_NIGHTLY_JOB = true
-    ITPARAMETERS = """
-    | -DZOOKEEPER_HOSTNAME=%%ZOOKEEPER
-    | """
+//    ITPARAMETERS = """
+//    | -DZOOKEEPER_HOSTNAME=%%ZOOKEEPER
+//    | """
 
-    ITSERVICES = [
-        ['ZOOKEEPER': [
+    DEV = { config ->
+        doCompile(config)
+        //doUT(config)
+	def zookeeperServices = [
+	['ZOOKEEPER': [
             'image': 'jplock/zookeeper:3.5.2-alpha',
 	    'ports': [[containerPort: 2181, port: 2181]],
             'env': [
                   'zk_id=1'],
             'sleep': 60,
 	    'volumes': ["/tmp:/tmp", "/tmp2:/tmp2"]
-	]]]
-
-	ATSERVICES = [
-		['ZOOKEEPER': [
-			'image': 'jplock/zookeeper:3.5.2-alpha',
-			'env': [
-				'zk_id=1',
-				'USER=\$REMOTE_USER'],
-			'sleep': 5]]]
-
-    DEV = { config ->
-        doCompile(config)
-        //doUT(config)
-        doIT(config)
+	]]	
+	]
+        doIT(conf: config, parameters: "-DZOOKEEPER_HOSTNAME=%%ZOOKEEPER", services: zookeeperServices)
 	/*
 	    parallel(UT: {
         	doUT(config)

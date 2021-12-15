@@ -15,17 +15,34 @@ hose {
     DEV = { config ->
         doCompile(config)
         //doUT(config)
-	def zookeeperServices = [
-	['ZOOKEEPER': [
-            'image': 'jplock/zookeeper:3.5.2-alpha',
-	    'ports': [[containerPort: 2181, port: 2181]],
-            'env': [
-                  'zk_id=1'],
-            'sleep': 60,
-	    'volumes': ["/tmp:/tmp", "/tmp2:/tmp2"]
-	]]	
-	]
-        doIT(conf: config, parameters: "-DZOOKEEPER_HOSTNAME=%%ZOOKEEPER", services: zookeeperServices)
+	parallel(
+		ZOOKEEPER: {
+			def zookeeperServices = [
+				['ZOOKEEPER': [
+            				'image': 'jplock/zookeeper:3.5.2-alpha',
+	    				'ports': [[containerPort: 2181, port: 2181]],
+            				'env': [
+                  				'zk_id=1'],
+            				'sleep': 60,
+	    				'volumes': ["/tmp2:/tmp2"]
+				]]	
+			]
+			doIT(conf: config, parameters: "-DZOOKEEPER_HOSTNAME=%%ZOOKEEPER", services: zookeeperServices)		
+		},
+		SFTP: {
+			def sftpServices = [
+				['SFTP': [
+					image: 'stratio/rocket-sftp-it:0.1.0-M1',
+					sleep: 600,
+					healthcheck: 2222,
+					cmd: 'foo:pass:1001',
+					volumes: ['/tmp:/home/foo/tmp']
+				]]
+			]
+			doIT(conf: config, parameters: "-DSFTP_HOSTNAME=%%SFTP", services: sftpServices)
+	)
+	
+        
 	/*
 	    parallel(UT: {
         	doUT(config)

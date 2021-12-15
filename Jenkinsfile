@@ -39,7 +39,7 @@ hose {
 					volumes: ['/tmp:/home/foo/tmp']
 				]]
 			]
-			doIT(conf: config, parameters: "-DSFTP_HOSTNAME=%%SFTP", services: sftpServices
+			doIT(conf: config, parameters: "-DSFTP_HOSTNAME=%%SFTP", services: sftpServices)
 		}
 	)
 	/*

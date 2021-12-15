@@ -27,7 +27,7 @@ hose {
 	    				'volumes': ["/tmp2:/tmp2"]
 				]]	
 			]
-			doIT(conf: config, parameters: "-DZOOKEEPER_HOSTNAME=%%ZOOKEEPER", services: zookeeperServices)		
+			doIT(conf: config, parameters: "-DZOOKEEPER_HOSTNAME=%%ZOOKEEPER", services: zookeeperServices, stageName: 'Zookeeper')		
 		},
 		SFTP: {
 			def sftpServices = [
@@ -39,7 +39,7 @@ hose {
 					volumes: ['/tmp:/home/foo/tmp']
 				]]
 			]
-			doIT(conf: config, parameters: "-DSFTP_HOSTNAME=%%SFTP", services: sftpServices)
+			doIT(conf: config, parameters: "-DSFTP_HOSTNAME=%%SFTP", services: sftpServices, stageName: 'SFTP')
 		}
 	)
 	/*

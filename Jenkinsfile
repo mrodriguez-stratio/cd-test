@@ -20,10 +20,10 @@ hose {
 			def zookeeperServices = [
 				['ZOOKEEPER': [
             				'image': 'jplock/zookeeper:3.5.2-alpha',
-	    				'ports': [[containerPort: 2181, port: 2181]],
+	    				healthcheck: 2181,
             				'env': [
                   				'zk_id=1'],
-            				'sleep': 600,
+            				'sleep': 180,
 	    				'volumes': ["/tmp2:/tmp2"]
 				]]	
 			]

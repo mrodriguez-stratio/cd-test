@@ -15,6 +15,7 @@ hose {
     DEV = { config ->
         doCompile(config)
         //doUT(config)
+	    /*
 	parallel(
 		ZOOKEEPER: {
 			def zookeeperServices = [
@@ -42,6 +43,7 @@ hose {
 			doIT(conf: config, parameters: "-DSFTP_HOSTNAME=%%SFTP", services: sftpServices, stageName: 'SFTP')
 		}
 	)
+	*/
 	/*
 	    parallel(UT: {
         	doUT(config)

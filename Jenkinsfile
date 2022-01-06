@@ -15,7 +15,7 @@ hose {
     DEV = { config ->
         doCompile(config)
         //doUT(config)
-	    /*
+	    
 	parallel(
 		ZOOKEEPER: {
 			def zookeeperServices = [
@@ -41,9 +41,22 @@ hose {
 				]]
 			]
 			doIT(conf: config, parameters: "-DSFTP_HOSTNAME=%%SFTP", services: sftpServices, stageName: 'SFTP')
+		},
+		POSTGRES: {
+			def postgresServices = [
+				['POSTGRES': [
+					image: 'postgres:9.6',
+					sleep: 60,
+					healthcheck: 5432,
+					env: ['POSTGRES_USER=admin', 'POSTGRES_PASSWORD=1234', 'POSTGRES_DATABASE=db', 'PGDATA=/pgtmpfs'],
+					k8sVolumes: [
+						[volumeMount: [mountPath: "/pgtmpfs"], volume: [emptyDir: [medium: "Memory", sizeLimit: "256Mi"]]]
+						]
+					]]
+				]
+			doIT(conf: config, parameters: "-DPOSTGRES_HOST=%%POSTGRES", services: postgresServices, stageName: 'Postgres')
 		}
 	)
-	*/
 	/*
 	    parallel(UT: {
         	doUT(config)

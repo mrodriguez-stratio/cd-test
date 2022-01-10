@@ -1,9 +1,13 @@
 # Changelog
-## 0.80.0 (upcoming)
+## 0.81.0 (upcoming)
 
-* A change for 0.80.0 
+* Pending changelog
 
 ## Previous development
+
+### Branched to branch-0.80 (2022-01-10)
+
+* A change for 0.80.0 
 
 ### Branched to branch-0.79 (2022-01-10)
 

@@ -1,5 +1,5 @@
 # Changelog
-## 0.79.0 (upcoming)
+## 0.79.0 (2022-01-10)
 
 * A change for 0.79.0 
 

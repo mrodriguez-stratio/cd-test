@@ -1,7 +1,7 @@
 # Changelog
 ## 0.79.0 (upcoming)
 
-* Pending changelog
+* A change for 0.79.0 
 
 ## Previous development
 

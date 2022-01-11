@@ -5,6 +5,8 @@ MAINTAINER CD "cd@stratio.com"
 
 ARG VERSION
 RUN apt-get update && apt-get -y install git && rm -rf /var/lib/apt/lists/*
+
 COPY target/cd-test-${VERSION}.jar /
-RUN --mount=type=ssh git clone git@github.com:Stratio/continuous-delivery-tng.git
+RUN mkdir -m 700 /root/.ssh; touch -m 600 /root/.ssh/known_hosts; ssh-keyscan github.com > /root/.ssh/known_hosts
+RUN --mount=type=ssh,id=default git clone git@github.com:Stratio/continuous-delivery-tng.git
 CMD ["/usr/bin/tail", "-f", "/dev/null"]

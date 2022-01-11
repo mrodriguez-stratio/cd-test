@@ -15,7 +15,7 @@ hose {
     DEV = { config ->
         doCompile(config)
         //doUT(config)
-	    
+	/*    
 	parallel(
 		ZOOKEEPER: {
 			def zookeeperServices = [
@@ -57,6 +57,7 @@ hose {
 			doIT(conf: config, parameters: "-DPOSTGRES_HOST=%%POSTGRES", services: postgresServices, stageName: 'Postgres')
 		}
 	)
+	*/
 	/*
 	    parallel(UT: {
         	doUT(config)
@@ -68,7 +69,7 @@ hose {
 	doStaticAnalysis(conf: config)
 	doDeploy(conf: config)
 	//doDockers(conf:config, dockerImages: [[conf: config, image: "cd-test"]])
-	doDocker(conf: config)
+	doDocker(conf: config, credentials: 'ATHENS_SSH_KEY')
 		    
 	//doRenameImages(conf: config)
     }

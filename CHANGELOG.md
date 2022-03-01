@@ -1,7 +1,8 @@
 # Changelog
 ## 0.84.0 (upcoming)
 
-* Pending changelog
+* Some changes that should not be lost in translation
+* And more changes
 
 ## Previous development
 

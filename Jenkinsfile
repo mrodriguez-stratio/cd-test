@@ -1,4 +1,4 @@
-@Library('libpipelines') _
+@Library('libpipelines@workspace-volume-name-its') _
 
 hose {
     EMAIL = 'cd'

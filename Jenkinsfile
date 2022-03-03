@@ -1,4 +1,4 @@
-@Library('libpipelines@workspace-volume-name-its') _
+@Library('libpipelines@parallel-conf') _
 
 hose {
     EMAIL = 'cd'
@@ -65,6 +65,10 @@ hose {
                 doIT(config)
             }, failFast: true)
 	    */
+	doIT(config)
+	useClonedVolume { config ->
+		doIT(config)	    
+	}
         doPackage(config)
 	//doStaticAnalysis(conf: config)
 	doDeploy(conf: config)

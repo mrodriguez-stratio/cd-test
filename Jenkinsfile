@@ -66,7 +66,7 @@ hose {
             }, failFast: true)
 	    */
 	doIT(config)
-	useClonedVolume { config ->
+	useClonedVolume { def config ->
 		doIT(config)	    
 	}
         doPackage(config)

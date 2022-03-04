@@ -66,7 +66,7 @@ hose {
             }, failFast: true)
 	    */
 	doIT(config)
-	useClonedVolume {->
+	useClonedVolume(config) { clonedConfig ->
 		doIT(clonedConfig)	    
 	}
         doPackage(config)

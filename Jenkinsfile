@@ -66,8 +66,8 @@ hose {
             }, failFast: true)
 	    */
 	doIT(config)
-	useClonedVolume(config) { clonedConfig ->
-		doIT(clonedConfig)	    
+	useClonedVolume(config) { 
+		doIT(config)	    
 	}
         doPackage(config)
 	//doStaticAnalysis(conf: config)

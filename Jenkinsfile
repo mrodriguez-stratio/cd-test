@@ -15,7 +15,7 @@ hose {
     DEV = { config ->
         doCompile(config)
         //doUT(config)
-	/*    
+	    
 	parallel(
 		ZOOKEEPER: {
 			def zookeeperServices = [
@@ -55,9 +55,21 @@ hose {
 					]]
 				]
 			doIT(conf: config, parameters: "-DPOSTGRES_HOST=%%POSTGRES", services: postgresServices, stageName: 'Postgres')
+		},
+		SFTP2: {
+			def sftpServices2 = [
+				['SFTP2': [
+					image: 'stratio/rocket-sftp-it:0.1.0-M1',
+					sleep: 600,
+					healthcheck: 2222,
+					cmd: 'foo:pass:1001',
+					volumes: ['%%WORKSPACE:/home/foo/tmp']
+				]]
+			]
+			doIT(conf: config, parameters: "-DSFTP_HOSTNAME=%%SFTP", services: sftpServices2, stageName: 'SFTP2')
 		}
 	)
-	*/
+	
 	/*
 	    parallel(UT: {
         	doUT(config)
@@ -65,10 +77,12 @@ hose {
                 doIT(config)
             }, failFast: true)
 	    */
-	doIT(config)
+	//doIT(config)
+	    /*
 	useClonedVolume(config) { 
 		doIT(config)	    
 	}
+	*/
         doPackage(config)
 	//doStaticAnalysis(conf: config)
 	doDeploy(conf: config)

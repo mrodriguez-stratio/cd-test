@@ -17,6 +17,7 @@ hose {
         //doUT(config)
 	    
 	parallel(
+		/*
 		ZOOKEEPER: {
 			def zookeeperServices = [
 				['ZOOKEEPER': [
@@ -56,6 +57,7 @@ hose {
 				]
 			doIT(conf: config, parameters: "-DPOSTGRES_HOST=%%POSTGRES", services: postgresServices, stageName: 'Postgres')
 		},
+		*/
 		SFTP2: {
 			def sftpServices2 = [
 				['SFTP2': [
@@ -66,7 +68,7 @@ hose {
 					volumes: ['%%WORKSPACE:/home/foo/tmp']
 				]]
 			]
-			doIT(conf: config, parameters: "-DSFTP_HOSTNAME=%%SFTP", services: sftpServices2, stageName: 'SFTP2')
+			doIT(conf: config, parameters: "-DSFTP_HOSTNAME=%%SFTP2", services: sftpServices2, stageName: 'SFTP2')
 		}
 	)
 	

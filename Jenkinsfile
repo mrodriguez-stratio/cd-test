@@ -64,7 +64,7 @@ hose {
 					sleep: 600,
 					healthcheck: 2222,
 					cmd: 'foo:pass:1001',
-					volumes: ['%%WORKSPACE:/home/foo/tmp']
+					volumes: ['%%WORKSPACE/src/main/java/com/stratio/qa/cdtest:/home/foo/tmp']
 				]]
 			]
 			doIT(conf: config, parameters: "-DSFTP_HOSTNAME=%%SFTP2", services: sftpServices2, stageName: 'SFTP2')

@@ -1,4 +1,4 @@
-@Library('libpipelines@fix/milestone-tags') _
+@Library('libpipelines@parallel-conf') _
 
 hose {
     EMAIL = 'cd'
@@ -7,7 +7,6 @@ hose {
     GENERATE_QA_ISSUE = true
     ENABLE_CONCURRENT_BUILDS = false
     SHOW_RAW_YAML = true
-    VERSIONING_TYPE = "liveVersion"
 //    ITPARAMETERS = """
 //    | -DZOOKEEPER_HOSTNAME=%%ZOOKEEPER
 //    | """

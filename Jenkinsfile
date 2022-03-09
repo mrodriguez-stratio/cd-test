@@ -1,4 +1,4 @@
-@Library('libpipelines@parallel-conf') _
+@Library('libpipelines@fix/milestone-tags') _
 
 hose {
     EMAIL = 'cd'

@@ -6,7 +6,7 @@ hose {
     DEPLOYONPRS = true
     GENERATE_QA_ISSUE = true
     ENABLE_CONCURRENT_BUILDS = false
-    SHOW_RAW_YAML = false
+    SHOW_RAW_YAML = true
     VERSIONING_TYPE = "stratioVersion"
 //    ITPARAMETERS = """
 //    | -DZOOKEEPER_HOSTNAME=%%ZOOKEEPER

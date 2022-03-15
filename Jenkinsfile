@@ -1,4 +1,4 @@
-@Library('libpipelines@preproduction') _
+@Library('libpipelines@markdown-release-mail') _
 
 hose {
     EMAIL = 'cd'
@@ -14,9 +14,8 @@ hose {
     DEV = { config ->
         doCompile(config)
         //doUT(config)
-	    
+/*	    
 	parallel(
-		/*
 		ZOOKEEPER: {
 			def zookeeperServices = [
 				['ZOOKEEPER': [
@@ -30,7 +29,6 @@ hose {
 			]
 			doIT(conf: config, parameters: "-DZOOKEEPER_HOSTNAME=%%ZOOKEEPER", services: zookeeperServices, stageName: 'Zookeeper')		
 		},
-		*/
 		SFTP: {
 			def sftpServices = [
 				['SFTP': [
@@ -43,7 +41,6 @@ hose {
 			]
 			doIT(conf: config, parameters: "-DSFTP_HOSTNAME=%%SFTP", services: sftpServices, stageName: 'SFTP')
 		},
-		/*
 		POSTGRES: {
 			def postgresServices = [
 				['POSTGRES': [
@@ -58,7 +55,6 @@ hose {
 				]
 			doIT(conf: config, parameters: "-DPOSTGRES_HOST=%%POSTGRES", services: postgresServices, stageName: 'Postgres')
 		},
-		*/
 		SFTP2: {
 			def sftpServices2 = [
 				['SFTP2': [
@@ -72,8 +68,6 @@ hose {
 			doIT(conf: config, parameters: "-DSFTP_HOSTNAME=%%SFTP2", services: sftpServices2, stageName: 'SFTP2')
 		}
 	)
-	
-	/*
 	    parallel(UT: {
         	doUT(config)
             }, IT: {

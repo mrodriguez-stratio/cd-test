@@ -1,4 +1,4 @@
-@Library('libpipelines@markdown-release-mail') _
+@Library('libpipelines@update-inbound-agent') _
 
 hose {
     EMAIL = 'cd'

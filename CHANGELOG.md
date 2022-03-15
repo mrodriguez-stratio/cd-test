@@ -1,7 +1,12 @@
 # Changelog
+
+## 0.86.0 (upcoming)
+
+* Another version
+
 ## 0.85.0 (upcoming)
 
-* Pending changelog
+* Some old
 
 ## Previous development
 

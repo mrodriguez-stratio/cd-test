@@ -1,8 +1,8 @@
-@Library('libpipelines@update-inbound-agent') _
+@Library('libpipelines') _
 
 hose {
     EMAIL = 'cd'
-    ANCHORE_TEST = false
+    ANCHORE_TEST = true
     DEPLOYONPRS = true
     GENERATE_QA_ISSUE = true
     ENABLE_CONCURRENT_BUILDS = false

@@ -1,18 +1,14 @@
 # Changelog
 
-## 0.200.0 (upcoming)
+## 0.201.0 (upcoming)
 
-* version 200
-
-## 0.86.0 (upcoming)
-
-* Another version
-
-## 0.85.0 (upcoming)
-
-* Some old
+* Pending changelog
 
 ## Previous development
+
+### Branched to branch-0.200 (2022-11-03)
+
+* version 200
 
 ### Branched to branch-0.84 (2022-03-01)
 

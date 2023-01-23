@@ -22,7 +22,7 @@ hose {
                   'zk_id=1'],
             'sleep': 5]]]
     DEV = { config ->
-//         doCompile(config)
+         doCompile(config)
 // 	parallel(UT: {
 //         	doUT(config)
 //             }, IT: {
@@ -30,7 +30,7 @@ hose {
 //             }, failFast: true)
 //         doPackage(config)
 // 	doStaticAnalysis(conf: config)
-// 	doDeploy(conf: config)
+ 	doDeploy(conf: config)
 	doDocker(conf: config)
     }
 }

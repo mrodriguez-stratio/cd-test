@@ -1,4 +1,4 @@
-FROM ubuntu:lunar
+FROM ubuntu:18.04
 MAINTAINER CD "cd@stratio.com"
 
 ARG VERSION

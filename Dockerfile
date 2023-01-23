@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM python:alpine3.17
 MAINTAINER CD "cd@stratio.com"
 
 ARG VERSION

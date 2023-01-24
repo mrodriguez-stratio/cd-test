@@ -6,7 +6,7 @@
 
 # CMD ["/usr/bin/tail", "-f", "/dev/null"]
 
-FROM maven:3.8.6-openjdk-11
+FROM maven:3.8.7-eclipse-temurin-11
 
 ARG UNAME=jenkins
 ARG UID=1000

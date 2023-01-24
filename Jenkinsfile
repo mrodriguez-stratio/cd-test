@@ -31,6 +31,6 @@ hose {
 //         doPackage(config)
 // 	doStaticAnalysis(conf: config)
  	doDeploy(conf: config)
-	doDocker(conf: config)
+	doDocker(conf: config, dockerImages: [image: "testing-grype-image"])
     }
 }

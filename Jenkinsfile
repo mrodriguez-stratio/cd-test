@@ -1,4 +1,4 @@
-@Library('libpipelines') _
+@Library('libpipelines@preproduction') _
 
 hose {
     EMAIL = 'cd'
@@ -31,6 +31,6 @@ hose {
 //         doPackage(config)
 // 	doStaticAnalysis(conf: config)
  	//doDeploy(conf: config)
-	doDockers(conf: config, dockerImages: [[conf: config, image: "cd-test"]])
+	doDockers(conf: config, dockerImages: [[conf: config, image: "grype-test"]])
     }
 }

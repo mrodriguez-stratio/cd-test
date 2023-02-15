@@ -2,7 +2,7 @@
 
 ## 0.81.0 (upcoming)
 
-* Pending changelog
+* test gh admin user
 
 ## Previous development
 

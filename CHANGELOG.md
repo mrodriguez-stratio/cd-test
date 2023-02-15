@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.79.0 (upcoming)
+
+* testing admin rights
+
 ## 0.78.0 (upcoming)
 
 * testing grype

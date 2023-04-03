@@ -1,4 +1,4 @@
-@Library('libpipelines@preproduction') _
+@Library('libpipelines@grypeRemoveFail') _
 
 hose {
     EMAIL = 'cd'
@@ -31,7 +31,7 @@ hose {
 //         doPackage(config)
 // 	doStaticAnalysis(conf: config)
  	//doDeploy(conf: config)
-	doSemgrepAnalysis(conf: config, configs: ["/semgrep-rules/rules/dockerfile-rules.json","/semgrep-rules/rules/generic-rules.json","/semgrep-rules/rules/java-rules.json","/semgrep-rules/rules/scala-rules.json"], excludes: ["*.json", "*.sh", "*.xml", "*.yaml", "*.yml", "*/src/test/", "*/src/integration-test/"])
-	doDockers(conf: config, dockerImages: [[conf: config, image: "cd-test"], [conf: config, image: "grype-test-1", dockerfile: "Dockerfile.test2"]])
+//	doSemgrepAnalysis(conf: config, configs: ["/semgrep-rules/rules/dockerfile-rules.json","/semgrep-rules/rules/generic-rules.json","/semgrep-rules/rules/java-rules.json","/semgrep-rules/rules/scala-rules.json"], excludes: ["*.json", "*.sh", "*.xml", "*.yaml", "*.yml", "*/src/test/", "*/src/integration-test/"])
+	doDockers(conf: config, dockerImages: [[conf: config, image: "grype-test-1", dockerfile : 'Dockerfile'], [conf: config, image: "grype-test-2", dockerfile: "Dockerfile.test2"]])
     }
 }
